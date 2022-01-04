@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Toggle = ({id, title, toggleStatus, onStatusChange, size, type }) => {
+const Toggle = ({ id, title, toggleStatus, onStatusChange, size, type }) => {
   const toggleType = {
     s: ['w-16 h-8', 'w-4 h-4'],
     m: ['w-24 h-10', 'w-6 h-6']
@@ -12,10 +12,11 @@ const Toggle = ({id, title, toggleStatus, onStatusChange, size, type }) => {
     <div
       className={`flex ${
         type === 'v' && 'flex-col'
-      } items-center justify-between w-full h-full`}
+      } items-center justify-between w-full h-full px-4 `}
     >
-      <label className="p-4 px-2 text-sm text-white">
-        {title}: {!toggleStatus ? 'OFF' : 'ON'}
+      <label className="p-4 px-2 text-sm tracking-wider uppercase text-gray-50">
+        {title}
+        {/* {title}: {!toggleStatus ? 'OFF' : 'ON'} */}
       </label>
       <div className="flex items-center justify-center text-white">
         <label

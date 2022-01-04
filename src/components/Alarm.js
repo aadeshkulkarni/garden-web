@@ -21,16 +21,14 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
         />
         {timerInfo.status &&
           timerInfo.duration &&
-          timerInfo.hour &&
-          timerInfo.minutes &&
-          timerInfo.seconds && (
+          timerInfo.time && (
             <>
               <div className="flex justify-between p-2 mb-2 text-white border-b border-gray-500 text-md ">
                 <span>Timer: </span>
                 <span>
                   {timerInfo.time.split(':')[0] || '00'}:
                   {timerInfo.time.split(':')[1] || '00'}:
-                  {timerInfo.time.split(':')[2] || '00'}:
+                  {timerInfo.time.split(':')[2] || '00'}
                 </span>
               </div>
               <div className="flex justify-between p-2 mb-2 text-white border-b border-gray-500 text-md ">

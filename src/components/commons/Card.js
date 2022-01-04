@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Card = ({ cardTitle, cardSubtitle, thumbnailImgSrc, children }) => {
   const [showCardBody, setShowCardBody] = useState(false)
   return (
-    <div className="flex flex-col p-2 my-4">
+    <div className="flex flex-col p-2 my-2">
       <div className="relative flex items-center justify-between w-full p-2 text-gray-100 bg-gray-900 border border-gray-900 shadow-md h-28 shadow-gray-800 rounded-2xl">
         <div className="w-20 h-20 p-2 bg-gray-700 border border-gray-800 rounded-2xl">
           <img src={thumbnailImgSrc} />

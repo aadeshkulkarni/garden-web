@@ -16,8 +16,8 @@ const GardenStats = ({temperature,humidity}) => {
         <ProgressBar percent={85} suffix="%" colorRange={{"low":[0,33],"medium":[34,66],"high":[67,100]}}/>
       </div>
       <div className="flex flex-col items-center justify-center w-40 h-40 p-2 bg-gray-900 border border-gray-900 shadow-md shadow-gray-800 rounded-2xl">
-        <label className="p-1 text-sm text-gray-100">Climate</label>
-        <ProgressBar percent={55} suffix="°C" colorRange={{"low":[0,33],"medium":[34,66],"high":[67,100]}}/>
+        <label className="p-1 text-sm text-gray-100">Soil Moisture</label>
+        <ProgressBar percent={55} suffix="%" colorRange={{"low":[0,33],"medium":[34,66],"high":[67,100]}}/>
       </div>
     </div>
   )
