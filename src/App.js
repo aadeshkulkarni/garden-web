@@ -43,6 +43,7 @@ function App() {
       setTemp(temperature)
       setHumidity(humidity)
       setStatus(water)
+      setTimerInfo(timer)
     })
   }, [])
 

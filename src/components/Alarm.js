@@ -51,6 +51,7 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
                 pattern="\d*"
                 maxLength="2"
                 placeholder="HH"
+                value={timerInfo.time.split(':')[0]}
                 onChange={(e) =>
                   setTimerInfo({ ...timerInfo, time:`${e.target.value}:${timerInfo.time.split(':')[1]}:${timerInfo.time.split(':')[2]}` })
                 }
@@ -61,6 +62,7 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
                 pattern="\d*"
                 maxLength="2"
                 placeholder="MM"
+                value={timerInfo.time.split(':')[1]}
                 onChange={(e) =>
                   setTimerInfo({ ...timerInfo, time:`${timerInfo.time.split(':')[0]}:${e.target.value}:${timerInfo.time.split(':')[2]}` })
                 }
@@ -71,6 +73,7 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
                 pattern="\d*"
                 maxLength="2"
                 placeholder="SS"
+                value={timerInfo.time.split(':')[2]}
                 onChange={(e) =>
                   setTimerInfo({ ...timerInfo, time:`${timerInfo.time.split(':')[0]}:${timerInfo.time.split(':')[1]}:${e.target.value}` })
                 }
@@ -86,6 +89,7 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
                 pattern="\d*"
                 maxLength="2"
                 placeholder="In seconds"
+                value={timerInfo.duration}
                 onChange={(e) =>
                   setTimerInfo({ ...timerInfo, duration: e.target.value })
                 }
@@ -97,7 +101,7 @@ const Alarm = ({ timerInfo, setTimerInfo, onSetTimerHandler }) => {
               className="w-full p-4 my-2 text-sm font-semibold text-center text-white border border-emerald-700 bg-emerald-600 bg-gradient-to-tr rounded-2xl"
               onClick={onSetTimerHandler}
             >
-              SET TIMER
+             {timerInfo.status ? 'CHANGE TIMER' : 'SET TIMER'}
             </button>
           </div>
         </>
